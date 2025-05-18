@@ -3,25 +3,29 @@
     "name": "expo_realestatex",
     "slug": "expo_realestatex",
     "version": "1.0.0",
-
     "scheme": "expo_realestatex",
     "web": {
       "bundler": "metro",
       "output": "static",
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-router"],
-    "experiments": {
-      "typedRoutes": true,
 
-      "tsconfigPaths": true
+    "androidNavigationBar": {
+      "backgroundColor": "#FFFFFF"
+    },
+    "androidStatusBar": {
+      "backgroundColor": "#FFFFFF",
+      "barStyle": "dark-content"
     },
 
+    "plugins": ["expo-router", "expo-secure-store", "expo-font"],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-
     "userInterfaceStyle": "light",
-
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -35,7 +39,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": ["INTERNET"]
     }
   }
 }
